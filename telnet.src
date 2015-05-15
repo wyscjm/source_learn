@@ -1,0 +1,33 @@
+#get source
+apt-get install telnet
+
+#get /netkit-telnet-0.17 at source
+
+#install
+./configure
+make
+sudo make install
+
+#analysis
+    main
+初始化
+    1.初始化terminal
+    2.初始化网络
+    3.初始化telnet
+    4.初始化系统
+    （5.初始化3270)
+(设置字符显示列表:__setlist_init)(工作在编译BUG时）
+保存telminal状态
+判断一些状态 eight、prompt、user、addr、family、rlogin、autologin
+解析命令行
+判断是否是自动登陆
+设置新的argc,argv，包含（-l(user),-b(addr),(family-ip4 or ip6),host,port
+    并进行一些判断
+sigsetjmp
+死循环{
+    运行shell
+    或者命令界面
+}
+
+
+
